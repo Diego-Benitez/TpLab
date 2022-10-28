@@ -630,8 +630,8 @@ int Puntuacion(int vec[5], int p[]) ///r=4 des
 
 }
 
-///--------------------Funcion de Tirada---------------
-void tirada(int cont, int opcTirada, int vec[], int vT[]) {
+///--------------------Funcion de Tirada-------------------------
+/*void tirada(int cont, int opcTirada, int vec[], int vT[]) {
 
   int lanzarDados, dadoSelec;
 
@@ -705,7 +705,83 @@ void tirada(int cont, int opcTirada, int vec[], int vT[]) {
 
   Generala(vec);
 }
+*/
+int tirada(int cont, int opcTirada, int vec[], int vT[], int tiradaTotal) {
 
+  int lanzarDados, dadoSelec;
+
+
+  while (cont == 2 || cont == 3) {
+    cout << "cuantos dados desea volver a lanzar? ";
+    cin >> lanzarDados; // hacer un for para seleccionar los dados a lanzar solo
+                        // si son mayor a 1
+
+    if (lanzarDados >= 1) {
+      for (int i = 0; i < lanzarDados; i++) {
+        cout << "Que dado desea lanzar? (Del 1 al 5) ";
+        cin >> dadoSelec;
+
+        switch (dadoSelec) { // intento de reemplazar un dado seleccionado por
+                             // una tirada al azar y luego mostrar los dados pero
+                             // modificados
+        case 1:
+          cargarDados(vec, 6, dadoSelec);
+          // mostrarVector(vec,5);
+
+          break;
+        case 2:
+          cargarDados(vec, 6, dadoSelec);
+          // mostrarVector(vec,5);
+          break;
+        case 3:
+          cargarDados(vec, 6, dadoSelec);
+          // mostrarVector(vec,5);
+          break;
+        case 4:
+          cargarDados(vec, 6, dadoSelec);
+          // mostrarVector(vec,5);
+          break;
+        case 5:
+          cargarDados(vec, 6, dadoSelec);
+          // mostrarVector(vec,5);
+          break;
+        }
+      }
+    }
+
+    cout << endl;
+
+    cout<< " TIRADA Nro: "<< cont << " - TIRADAS TOTALES: "<<tiradaTotal<<endl;
+    cout<<"------------------------------------------------------------------------"<<endl;
+    mostrarVector(vec, 5);
+    cout<<endl;
+
+    if (cont == 2){
+        Generala(vec);
+        cout << "¿Quiere Realizar otra tirada [1]? " << endl;
+        cout << "¿Quiere anotar el puntaje obtenido [2]?" << endl;
+        cin >> opcTirada;
+        if (opcTirada == 1) {
+            cont++;
+            tiradaTotal++;
+
+      } else if (opcTirada == 2) {
+            cont = 1;
+            Puntuacion(vec, vT);
+            cout << "FIN DE RONDA" << endl;
+      }
+    } else if ( cont == 3) {
+        Generala(vec);
+        cout<<"*combinaciones ganadoras disponibles: "<<endl;
+        cout<<"*anular combinacion: "<<endl;
+        Puntuacion(vec, vT);
+        cout << "FIN DE RONDA" << endl;
+        cont = 1;
+
+      }
+}
+return tiradaTotal;
+}
 //tabla -------------------------
 /*
 #include <iostream>
