@@ -58,7 +58,8 @@ void punto5() {
 
 void J1() {
   string nombre1;
-  int ronda, dados, opcTirada, cont = 1, i;
+  int ronda, dados, opcTirada, i;
+  int tiradaTotal = 1;
   int salir;
   cout << "Ingresar el nombre: ";
   cin >> nombre1;
@@ -68,9 +69,12 @@ void J1() {
   for (i = 0; i < ronda; i++) {
     rlutil::cls();
     int vec[5], vT[10];
+    int cont = 1;
 
-    cout << " TIRADA Nro 1  |  RONDA Nro: " << i+1 <<
-        "|  PUNTAJE TOTAL: " << endl; // Mostraria la tirada Inicial
+    cout <<"TURNO DE "<<nombre1<<"| RONDA Nro: " << i+1 << "|  PUNTAJE TOTAL: " << endl; // Mostraria la tirada Inicial
+    cout<<"------------------------------------------------------------------------"<<endl;
+    cout<< " TIRADA Nro: "<< cont << " - TIRADAS TOTALES: "<<tiradaTotal<<endl;
+    cout<<"------------------------------------------------------------------------"<<endl;
     cargarAleatorio(vec, 5, 6);
     mostrarVector(vec, 5);
     Generala(vec);
@@ -78,9 +82,9 @@ void J1() {
     cargar(vT);
     cout << endl;
 
-    cout << ">¿Quiere Realizar otra tirada? [1]" << endl;
-    cout << ">¿Quiere anotar el puntaje obtenido [2]?" << endl;
-    cout << ">¿Quiere salir de la partida? [0]" << endl;
+    cout << "Â¿Quiere Realizar otra tirada [1]? " << endl;
+    cout << "Â¿Quiere anotar el puntaje obtenido [2]?" << endl;
+    cout << "Â¿Quiere salir de la partida [0]? " << endl;
 
     // Selecciona el usuario que quiere hacer, faltaria el de anular puntuacion
 
@@ -88,7 +92,9 @@ void J1() {
     switch (opcTirada) {
     case 1:
       cont++;
-      tirada(cont, opcTirada, vec, vT);
+      tiradaTotal ++;
+      tiradaTotal = tirada(cont, opcTirada, vec, vT, tiradaTotal);
+
       break;
     case 2:
       Puntuacion(vec, vT);
