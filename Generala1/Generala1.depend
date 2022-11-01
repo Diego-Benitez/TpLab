@@ -1,0 +1,67 @@
+# depslib dependency file v1.0
+1666370203 source:c:\users\diego\documents\generala\generala1\main.cpp
+	<cstdio>
+	<cstdlib>
+	<cstring>
+	<ctime>
+	<iostream>
+	"funciones.h"
+	"partida.h"
+	"rlutil.h"
+
+1666373498 c:\users\diego\documents\generala\generala1\funciones.h
+	"rlutil.h"
+	<cstring>
+	<iostream>
+	<cstring>
+
+1666369944 c:\users\diego\documents\generala\generala1\rlutil.h
+	<iostream>
+	<string>
+	<cstdio>
+	<stdio.h>
+	<string.h>
+	<windows.h>
+	<conio.h>
+	<termios.h>
+	<unistd.h>
+	<sys/ioctl.h>
+	<sys/types.h>
+	<sys/time.h>
+
+1666373719 c:\users\diego\documents\generala\generala1\partida.h
+	"rlutil.h"
+
+1667324416 source:c:\users\sardón\desktop\lab 1\generala\generala1\main.cpp
+	<cstdio>
+	<cstdlib>
+	<cstring>
+	<ctime>
+	<iostream>
+	"funciones.h"
+	"partida.h"
+	"rlutil.h"
+
+1667331572 c:\users\sardón\desktop\lab 1\generala\generala1\funciones.h
+	"rlutil.h"
+	<cstring>
+	<iostream>
+	<cstring>
+
+1666369944 c:\users\sardón\desktop\lab 1\generala\generala1\rlutil.h
+	<iostream>
+	<string>
+	<cstdio>
+	<stdio.h>
+	<string.h>
+	<windows.h>
+	<conio.h>
+	<termios.h>
+	<unistd.h>
+	<sys/ioctl.h>
+	<sys/types.h>
+	<sys/time.h>
+
+1667330447 c:\users\sardón\desktop\lab 1\generala\generala1\partida.h
+	"rlutil.h"
+
